@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\AmazonReplica.API",
+    "\\backend\\AmazonReplica.API\\Controllers",
+    "\\backend\\AmazonReplica.API\\Data"
+  ],
+  "SelectedNode": "\\backend\\AmazonReplica.API\\Controllers",
+  "PreviewInSolutionExplorer": false
+}

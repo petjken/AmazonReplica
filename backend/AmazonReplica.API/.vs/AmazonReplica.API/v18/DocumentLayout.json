@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|c:\\users\\petja\\onedrive\\desktop\\amazonreplica\\backend\\amazonreplica.api\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|solutionrelative:controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|c:\\users\\petja\\onedrive\\desktop\\amazonreplica\\backend\\amazonreplica.api\\data\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|solutionrelative:data\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|c:\\users\\petja\\onedrive\\desktop\\amazonreplica\\backend\\amazonreplica.api\\data\\amazondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|solutionrelative:data\\amazondbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|c:\\users\\petja\\onedrive\\desktop\\amazonreplica\\backend\\amazonreplica.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{85CF658A-F3FE-C9E1-5962-CB102E1F3E0C}|AmazonReplica.API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\Data\\Book.cs",
+              "RelativeDocumentMoniker": "Data\\Book.cs",
+              "ToolTip": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\Data\\Book.cs",
+              "RelativeToolTip": "Data\\Book.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T17:57:17.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AmazonDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\Data\\AmazonDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AmazonDbContext.cs",
+              "ToolTip": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\Data\\AmazonDbContext.cs",
+              "RelativeToolTip": "Data\\AmazonDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T17:57:14.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "Controllers\\BooksController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T17:51:59.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-18T18:47:20.29Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
