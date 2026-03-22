@@ -295,3 +295,4 @@ C:\Users\petja\OneDrive\Desktop\AmazonReplica\backend\AmazonReplica.API\obj\Debu
 C:\Users\petja\OneDrive\Desktop\AmazonReplica\backend\AmazonReplica.API\obj\Debug\net10.0\AmazonReplica.API.pdb
 C:\Users\petja\OneDrive\Desktop\AmazonReplica\backend\AmazonReplica.API\obj\Debug\net10.0\AmazonReplica.API.genruntimeconfig.cache
 C:\Users\petja\OneDrive\Desktop\AmazonReplica\backend\AmazonReplica.API\obj\Debug\net10.0\ref\AmazonReplica.API.dll
+C:\Users\petja\OneDrive\Desktop\AmazonReplica\backend\AmazonReplica.API\obj\Debug\net10.0\AmazonReplica.API.sourcelink.json

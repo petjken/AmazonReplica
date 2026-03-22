@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AmazonReplica.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+763ac1ed1150fb5b06df565d36a5208b88581244")]
 [assembly: System.Reflection.AssemblyProductAttribute("AmazonReplica.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AmazonReplica.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

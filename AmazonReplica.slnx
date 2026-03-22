@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/backend/">
+    <Project Path="backend/AmazonReplica.API/AmazonReplica.API.csproj" />
+  </Folder>
+</Solution>
