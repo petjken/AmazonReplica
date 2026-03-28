@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gyrVUnr3zoc=",
+  "dgSpecHash": "Ga/JZhROZa0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\AmazonReplica.API.csproj",
+  "projectFilePath": "C:\\AmazonReplica\\backend\\AmazonReplica.API\\AmazonReplica.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\petja\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\petja\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

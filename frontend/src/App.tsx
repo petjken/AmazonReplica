@@ -5,6 +5,7 @@ import BooksPage from './pages/BooksPage';
 import BuyPage from "./pages/BuyPage";
 import CartPage from "./pages/CartPage";
 import { CartProvider } from "./context/CartContext";
+import SiteRating from "./components/SiteRating";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <CartProvider>
         <Router>
+          <SiteRating />
           <Routes>
             <Route path='/' element={<BooksPage/>}/>
             <Route path='/buy/:title/:bookID' element={<BuyPage/>}/>

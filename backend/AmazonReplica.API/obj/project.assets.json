@@ -5676,11 +5676,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\AmazonReplica.API.csproj",
+      "projectUniqueName": "C:\\AmazonReplica\\backend\\AmazonReplica.API\\AmazonReplica.API.csproj",
       "projectName": "AmazonReplica.API",
-      "projectPath": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\AmazonReplica.API.csproj",
+      "projectPath": "C:\\AmazonReplica\\backend\\AmazonReplica.API\\AmazonReplica.API.csproj",
       "packagesPath": "C:\\Users\\petja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\petja\\OneDrive\\Desktop\\AmazonReplica\\backend\\AmazonReplica.API\\obj\\",
+      "outputPath": "C:\\AmazonReplica\\backend\\AmazonReplica.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

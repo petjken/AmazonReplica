@@ -7,7 +7,7 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
     const [books, setBooks] = useState<Book[]>([]);
     const [pageSize, setPageSize] = useState<number>(10); 
     const [pageNum, setPageNum] =useState<number>(1);
-    const [totalItems, setTotalItems] = useState<number>(0);
+    const [, setTotalItems] = useState<number>(0);
     const [totalPages, setTotalPages] =useState<number>(0);
     const [sort, setSort] = useState<string>("title_asc");
     const navigate =useNavigate();
