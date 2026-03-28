@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import type { CartItem } from "../types/CartItem";
+import ShopBreadcrumb from "../components/ShopBreadcrumb";
+import DiscountProgressBar from "../components/DiscountProgressBar";
 
 function CartPage() {
     
@@ -10,7 +12,9 @@ function CartPage() {
 
     return (
         
-        <div>
+        <div className="container mt-4">
+            <ShopBreadcrumb />
+            <DiscountProgressBar />
             <h2>
                 Your cart
             </h2>

@@ -1,5 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import WelcomeBand from "../components/WelcomeBand";
+import ShopBreadcrumb from "../components/ShopBreadcrumb";
+import DiscountProgressBar from "../components/DiscountProgressBar";
 import { useCart } from "../context/CartContext";
 import { useEffect, useState } from "react";
 import type { CartItem } from "../types/CartItem";
@@ -79,26 +81,31 @@ function BuyPage() {
 
     return (
         <>
-            <WelcomeBand />
-            <h2>
-                {book ? `Buy books: ${book.title}` : "Buy books"}
-            </h2>
+            <div className="container mt-4">
+                <ShopBreadcrumb />
+                <DiscountProgressBar />
+                <WelcomeBand />
+                <h2>
+                    {book ? `Buy books: ${book.title}` : "Buy books"}
+                </h2>
 
-            <div>
-                {loading && <p>Loading book…</p>}
-                {!loading && !book && <p>Could not load this book.</p>}
-                {book && (
-                    <>
-                        <p>
-                            <strong>Price:</strong> ${book.price.toFixed(2)}
-                        </p>
-                        <button type="button" onClick={handleAddToCart}>
-                            Add to Cart
-                        </button>
-                    </>
-                )}
+                <div>
+                    {loading && <p>Loading book…</p>}
+                    {!loading && !book && <p>Could not load this book.</p>}
+                    {book && (
+                        <>
+                            <p>
+                                <strong>Price:</strong> $
+                                {book.price.toFixed(2)}
+                            </p>
+                            <button type="button" onClick={handleAddToCart}>
+                                Add to Cart
+                            </button>
+                        </>
+                    )}
+                </div>
+                <button onClick={() => navigate("/books")}>Go Back</button>
             </div>
-            <button onClick={() => navigate("/books")}>Go Back</button>
 
             {showModal && (
                 <>

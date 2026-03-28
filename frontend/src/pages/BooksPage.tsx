@@ -3,6 +3,8 @@ import BookList from "../components/BookList";
 import WelcomeBand from "../components/WelcomeBand";
 import { useState } from "react";
 import CartSummary from "../components/CartSummary";
+import ShopBreadcrumb from "../components/ShopBreadcrumb";
+import DiscountProgressBar from "../components/DiscountProgressBar";
 
 
 function BooksPage() {
@@ -10,6 +12,8 @@ function BooksPage() {
   return (
     <div className='container mt-4'>
         <CartSummary/>
+        <ShopBreadcrumb />
+        <DiscountProgressBar />
         <WelcomeBand/>
       
           <div className='row '>
