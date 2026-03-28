@@ -16,4 +16,8 @@ receive no credit for that criteria in the rubric.) This is not meant to be a di
 please do not make it more than it is. I just want you to explore Bootstrap a little further and see
 what kind of features are available.
 Submit a pUbLiC link to the GitHub repository along with your comment about the
-Bootstrap attributes you added via Learning Suite.
+Bootstrap attributes you added via Learning Suite.'
+
+
+I added a breadcrumb feature in bootstrap which shows the path in the top left corner (books/cart)
+I also added a progress bar to the 15% discount at $75 spent in bootstrap.
