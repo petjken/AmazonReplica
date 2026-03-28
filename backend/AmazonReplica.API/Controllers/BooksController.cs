@@ -15,10 +15,16 @@ namespace AmazonReplica.API.Controllers
         }
 
         [HttpGet("AllBooks")]
-        public IActionResult Get(int pageSize = 5, int pageNum=1, string sort = "title_asc")
+        public IActionResult Get(int pageSize = 5, int pageNum=1, string sort = "title_asc",[FromQuery] List<string>? bookTypes = null )
         {
-
             var query = _amazonContext.Books.AsQueryable();
+            if (bookTypes != null && bookTypes.Any())
+            {
+                query = query.Where(b => bookTypes.Contains(b.Category));
+            }
+
+
+           
 
             if (sort == "title_asc")
             {
@@ -30,11 +36,14 @@ namespace AmazonReplica.API.Controllers
             {
                 query = query.OrderByDescending(b => b.Title);
             }
-            
+
+            var totalNumBooks = query.Count();
+
+
             var something = query
                 .Skip((pageNum -1)*pageSize).Take(pageSize).ToList();
              
-            var totalNumBooks = _amazonContext.Books.Count();
+            
             // This will now recognize 'Book' and '_amazonContext'
             var someObject = new 
             {
@@ -44,12 +53,14 @@ namespace AmazonReplica.API.Controllers
 
             return Ok(someObject);
         }
-
-        [HttpGet("NonFictionBooks")]
-        public IEnumerable<Book> GetFunctionalBooks()
+        [HttpGet("GetBookTypes")]
+        public IActionResult GetBookTypes ()
         {
-            var something = _amazonContext.Books.Where(b => b.Classification == "Non-Fiction").ToList();
-            return something;
+            var bookCategories = _amazonContext.Books
+                .Select(b => b.Category)
+                .Distinct()
+                .ToList();
+            return Ok(bookCategories);
         }
     }
 }
