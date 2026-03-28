@@ -17,7 +17,7 @@ function App() {
           <SiteRating />
           <Routes>
             <Route path='/' element={<BooksPage/>}/>
-            <Route path='/buy/:title/:bookID' element={<BuyPage/>}/>
+            <Route path='/buy/:bookID' element={<BuyPage/>}/>
             <Route path='/books' element={<BooksPage/>}/>
             <Route path='/cart' element={<CartPage/>}/>
           </Routes>

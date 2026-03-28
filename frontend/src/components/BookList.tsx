@@ -54,7 +54,7 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
                     </ul>   
 
                     <button className='btn btn-success' 
-                    onClick={()=> navigate(`/buy/${b.title}/${b.bookID}`) }>Buy</button>
+                    onClick={()=> navigate(`/buy/${b.bookID}`) }>Buy</button>
                 </div>
 
             

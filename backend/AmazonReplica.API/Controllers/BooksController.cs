@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using AmazonReplica.API.Data; // <--- THIS FIXES THE ERRORS
 
 namespace AmazonReplica.API.Controllers
@@ -53,6 +53,18 @@ namespace AmazonReplica.API.Controllers
 
             return Ok(someObject);
         }
+
+        [HttpGet("{bookId:int}")]
+        public IActionResult GetBook(int bookId)
+        {
+            var book = _amazonContext.Books.Find(bookId);
+            if (book == null)
+            {
+                return NotFound();
+            }
+            return Ok(book);
+        }
+
         [HttpGet("GetBookTypes")]
         public IActionResult GetBookTypes ()
         {
