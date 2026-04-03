@@ -6,6 +6,7 @@ import BuyPage from "./pages/BuyPage";
 import CartPage from "./pages/CartPage";
 import { CartProvider } from "./context/CartContext";
 import SiteRating from "./components/SiteRating";
+import AdminBooksPage from "./pages/AdminBooksPage";
 
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
             <Route path='/buy/:bookID' element={<BuyPage/>}/>
             <Route path='/books' element={<BooksPage/>}/>
             <Route path='/cart' element={<CartPage/>}/>
+            <Route path='/adminbooks' element={<AdminBooksPage/>} />
           </Routes>
+          
         </Router>
       </CartProvider>
     </>

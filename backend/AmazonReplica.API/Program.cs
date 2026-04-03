@@ -14,7 +14,12 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<AmazonDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("AmazonConnection")));
 
-builder.Services.AddCors();
+builder.Services.AddCors(options =>
+options.AddPolicy("AllowReactAppBlah",
+policy=> {
+    policy.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
+}));
+
 
 var app = builder.Build();
 
@@ -24,7 +29,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseCors(x => x.WithOrigins("http://localhost:3000"));
+app.UseCors("AllowReactAppBlah");
 
 app.UseHttpsRedirection();
 

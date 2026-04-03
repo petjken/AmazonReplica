@@ -1,3 +1,15 @@
+Bootstrap Extras:
+
+I added a breadcrumb feature in bootstrap which shows the path in the top left corner (books/cart)
+I also added a progress bar to the 15% discount at $75 spent in bootstrap.
+
+
+
+
+
+
+
+
 Mission #12 Assignment
 IS 413 – Hilton
 Continue the Bookstore project from Mission #11. Following the pattern in the videos, build in
@@ -17,7 +29,3 @@ please do not make it more than it is. I just want you to explore Bootstrap a li
 what kind of features are available.
 Submit a pUbLiC link to the GitHub repository along with your comment about the
 Bootstrap attributes you added via Learning Suite.'
-
-
-I added a breadcrumb feature in bootstrap which shows the path in the top left corner (books/cart)
-I also added a progress bar to the 15% discount at $75 spent in bootstrap.
