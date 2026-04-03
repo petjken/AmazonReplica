@@ -6,7 +6,7 @@ interface FetchBooksResponse {
 
 }
 
-const API_URL = `https://localhost:5000/Books`
+const API_URL = `https://amazonreplica-forkennedy-gfeefuh2fjg9ambb.francecentral-01.azurewebsites.net/Books`
 export const fetchBooks = async (
     pageSize: number,
     pageNum: number,
