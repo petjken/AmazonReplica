@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import{ type Book } from '../types/Book';
 import { useNavigate } from "react-router-dom";
-
+import { fetchBooks } from "../api/BooksAPI";
+import Pagination from './Pagination';
 function BookList({selectedCategories}: {selectedCategories: string[]}){
 
     const [books, setBooks] = useState<Book[]>([]);
@@ -9,19 +10,16 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
     const [pageNum, setPageNum] =useState<number>(1);
     const [, setTotalItems] = useState<number>(0);
     const [totalPages, setTotalPages] =useState<number>(0);
-    const [sort, setSort] = useState<string>("title_asc");
     const navigate =useNavigate();
+    const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
-        const fetchBooks = async () => {
-            const categoryParams = selectedCategories
-            .map((cat) => `bookTypes=${encodeURIComponent(cat)}`)
-            .join('&')
-
-            const response = await fetch(
-                `https://localhost:5000/Books/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sort=${sort}${selectedCategories.length ? `&${categoryParams}` : ''}`
-            );
-            const data = await response.json();
+        const loadBooks = async () => {
+            try {
+                setLoading(true);
+                const data = await fetchBooks(pageSize, pageNum, selectedCategories);
             setBooks(data.books);
             // setTotalItems(data.totalNumProjects)
             // setTotalPages(Math.ceil(totalItems / pageSize));
@@ -29,17 +27,26 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
             setTotalItems(count);
             const pages = Math.ceil(count / pageSize);
             setTotalPages(pages);
-
+        }
+        catch (error) {
+            setError((error as Error).message)
+        } finally {
+            setLoading(false);
+        }
         };
 
-        fetchBooks();
-    }, [pageSize, pageNum, sort, selectedCategories]); 
+        loadBooks();
+
+
+    }, [pageSize, pageNum, selectedCategories]); 
+    if (loading) return <p>Loading projects...</p>
+    if (error) return <p className='text-red-500'>Error: {error}</p>;
 
     return(
         <>
         
         <br/>
-        {books.map((b) =>
+        {books.map((b) => 
             <div id="bookCard" className="card" key={b.bookID}>
                 <h3 className="card-title">{b.title}</h3>
                 <div className="card-body">
@@ -57,49 +64,21 @@ function BookList({selectedCategories}: {selectedCategories: string[]}){
                     onClick={()=> navigate(`/buy/${b.bookID}`) }>Buy</button>
                 </div>
 
-            
+                
             </div>
+        
         )}
-
-        <button disabled={pageNum ===1} onClick ={() => setPageNum(pageNum -1)}>Previous</button>
-
-        {
-            [...Array(totalPages)].map((_, index) => (
-                <button key={index +1} onClick={() => setPageNum(index +1)} disabled={pageNum ===(index +1)}>
-                    {index+1}
-                    </button> 
-            ))}
-
-        <button 
-        disabled={pageNum=== totalPages} 
-        onClick={() => setPageNum(pageNum +1)}>Next</button>
-        <br/>
-        <label>
-            Results per page:
-            <select value={pageSize} 
-            onChange={(b) => {
-                setPageSize(Number(b.target.value));
-                setPageNum(1);
-                }}
-                >
-            
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="20">20</option>
-            </select>
-            <label className="ms-4 me-2">Sort by:</label>
-                <select 
-                    className="form-select w-auto" 
-                    value={sort} 
-                    onChange={(e) => {
-                        setSort(e.target.value);
-                        setPageNum(1); // Reset to page 1
-                    }}
-                >
-                    <option value="title_asc">Title (A-Z)</option>
-                    <option value="title_desc">Title (Z-A)</option>
-                </select>
-            </label>
+        <Pagination
+            currentPage = {pageNum}
+            totalPages = {totalPages}
+            pageSize = {pageSize}
+            onPageChange = {setPageNum}
+            onPageSizeChange = {(newSize) => {
+            setPageSize(newSize);
+            setPageNum(1);
+            }}
+            />
+        
         </>
 
     );

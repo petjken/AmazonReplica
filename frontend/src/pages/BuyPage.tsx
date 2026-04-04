@@ -6,6 +6,7 @@ import { useCart } from "../context/CartContext";
 import { useEffect, useState } from "react";
 import type { CartItem } from "../types/CartItem";
 import type { Book } from "../types/Book";
+import { API_BOOKS_BASE } from "../config/api";
 
 function BuyPage() {
     const navigate = useNavigate();
@@ -25,9 +26,7 @@ function BuyPage() {
             setLoading(true);
             setBook(null);
             try {
-                const response = await fetch(
-                    `https://localhost:5000/Books/${bookID}`
-                );
+                const response = await fetch(`${API_BOOKS_BASE}/${bookID}`);
                 if (!response.ok) {
                     return;
                 }

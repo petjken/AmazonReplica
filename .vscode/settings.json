@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3a333f0e-6472-4d2a-9d69-2d120398d28f/resourceGroups/appsvc_windows_francecentral/providers/Microsoft.Web/sites/AmazonBookstoreBackend",
+    "appService.deploySubpath": "."
+}

@@ -14,7 +14,25 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<AmazonDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("AmazonConnection")));
 
-builder.Services.AddCors();
+builder.Services.AddCors(options =>
+    options.AddPolicy("AllowReactAppBlah", policy =>
+    {
+        policy
+            .SetIsOriginAllowed(static origin =>
+            {
+                if (string.IsNullOrEmpty(origin))
+                    return false;
+                if (origin is "http://localhost:3000" or "https://localhost:3000" or "http://127.0.0.1:3000")
+                    return true;
+                if (Uri.TryCreate(origin, UriKind.Absolute, out var uri) &&
+                    uri.Host.EndsWith(".azurestaticapps.net", StringComparison.OrdinalIgnoreCase))
+                    return true;
+                return false;
+            })
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    }));
+
 
 var app = builder.Build();
 
@@ -24,7 +42,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseCors(x => x.WithOrigins("http://localhost:3000"));
+app.UseCors("AllowReactAppBlah");
 
 app.UseHttpsRedirection();
 
