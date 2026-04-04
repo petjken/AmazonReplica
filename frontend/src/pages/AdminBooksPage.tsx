@@ -86,7 +86,7 @@ useEffect(()=> {
                     <th>Category</th>
                     <th>Page Count</th>
                     <th>Price</th>
-                    
+                    <th className="text-nowrap">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -94,15 +94,15 @@ useEffect(()=> {
                     books.map((b) => (
                         <tr key={b.bookID}>
                             <td>{b.bookID}</td>
+                            <td>{b.title}</td>
                             <td>{b.author}</td>
                             <td>{b.publisher}</td>
                             <td>{b.isbn}</td>
                             <td>{b.classification}</td>
                             <td>{b.category}</td>
                             <td>{b.pageCount}</td>
-                            <td>{b.price}</td>
-                            
-                            <td>
+                            <td>{b.price.toFixed(2)}</td>
+                            <td className="align-middle text-nowrap" style={{ minWidth: "6.5rem" }}>
                                 <button className = "btn btn-primary btn-sm w-100 mb-1"
                                 onClick={() => setEditingBook(b)
 
