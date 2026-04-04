@@ -74,8 +74,9 @@ useEffect(()=> {
             />
         )}
 
-        <table className = "table table-bordered table-striped">
-            <thead className = "table-dark">
+        <div className="table-responsive">
+        <table className="table table-bordered table-striped">
+            <thead className="table-dark">
                 <tr>
                     <th>BookID</th>
                     <th>Title</th>
@@ -86,7 +87,13 @@ useEffect(()=> {
                     <th>Category</th>
                     <th>Page Count</th>
                     <th>Price</th>
-                    <th className="text-nowrap">Actions</th>
+                    <th
+                        className="text-nowrap align-middle"
+                        scope="col"
+                        style={{ minWidth: "11rem", width: "11rem" }}
+                    >
+                        Actions
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -102,23 +109,33 @@ useEffect(()=> {
                             <td>{b.category}</td>
                             <td>{b.pageCount}</td>
                             <td>{b.price.toFixed(2)}</td>
-                            <td className="align-middle text-nowrap" style={{ minWidth: "6.5rem" }}>
-                                <button className = "btn btn-primary btn-sm w-100 mb-1"
-                                onClick={() => setEditingBook(b)
-
-                                }>
-                                    Edit
-                                </button>
-                                <button className = "btn btn-danger btn-sm w-100" 
-                                onClick={() => handleDelete(b.bookID)}>
-                                    Delete
-                                </button>
+                            <td
+                                className="align-middle p-2"
+                                style={{ minWidth: "11rem", width: "11rem" }}
+                            >
+                                <div className="d-grid gap-1">
+                                    <button
+                                        type="button"
+                                        className="btn btn-primary btn-sm"
+                                        onClick={() => setEditingBook(b)}
+                                    >
+                                        Edit
+                                    </button>
+                                    <button
+                                        type="button"
+                                        className="btn btn-danger btn-sm"
+                                        onClick={() => handleDelete(b.bookID)}
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                     )
                 )}
             </tbody>
         </table>
+        </div>
         <Pagination 
         currentPage = {pageNum}
         totalPages = {totalPages}
