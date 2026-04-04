@@ -1,4 +1,5 @@
 import type { Book } from "../types/Book";
+import { API_BOOKS_BASE } from "../config/api";
 
 interface FetchBooksResponse {
     books: Book[];
@@ -6,7 +7,7 @@ interface FetchBooksResponse {
 
 }
 
-const API_URL = `https://amazonreplica-forkennedy-gfeefuh2fjg9ambb.francecentral-01.azurewebsites.net/Books`
+const API_URL = API_BOOKS_BASE;
 export const fetchBooks = async (
     pageSize: number,
     pageNum: number,

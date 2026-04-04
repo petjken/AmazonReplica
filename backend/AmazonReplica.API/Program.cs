@@ -15,10 +15,23 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AmazonDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("AmazonConnection")));
 
 builder.Services.AddCors(options =>
-options.AddPolicy("AllowReactAppBlah",
-policy=> {
-    policy.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader();
-}));
+    options.AddPolicy("AllowReactAppBlah", policy =>
+    {
+        policy
+            .SetIsOriginAllowed(static origin =>
+            {
+                if (string.IsNullOrEmpty(origin))
+                    return false;
+                if (origin is "http://localhost:3000" or "https://localhost:3000" or "http://127.0.0.1:3000")
+                    return true;
+                if (Uri.TryCreate(origin, UriKind.Absolute, out var uri) &&
+                    uri.Host.EndsWith(".azurestaticapps.net", StringComparison.OrdinalIgnoreCase))
+                    return true;
+                return false;
+            })
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    }));
 
 
 var app = builder.Build();
